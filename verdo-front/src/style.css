@@ -1,0 +1,143 @@
+@import "tailwindcss";
+
+:root,
+[data-theme="standard"] {
+  --theme-bg: #f7f3eb;
+  --theme-surface: rgba(255, 255, 255, 0.94);
+  --theme-surface-strong: #ffffff;
+  --theme-surface-soft: #f5f7f1;
+  --theme-text: #1f2937;
+  --theme-muted: #5f6b63;
+  --theme-border: rgba(132, 145, 117, 0.22);
+  --theme-accent: #1f8a5b;
+  --theme-accent-strong: #166244;
+  --theme-accent-soft: rgba(31, 138, 91, 0.12);
+  --theme-shadow: 0 20px 60px rgba(54, 67, 45, 0.08);
+}
+
+[data-theme="dark"] {
+  --theme-bg: #0f1720;
+  --theme-surface: rgba(17, 24, 39, 0.94);
+  --theme-surface-strong: #111827;
+  --theme-surface-soft: #17212d;
+  --theme-text: #e5edf5;
+  --theme-muted: #a0afbf;
+  --theme-border: rgba(148, 163, 184, 0.2);
+  --theme-accent: #34d399;
+  --theme-accent-strong: #10b981;
+  --theme-accent-soft: rgba(52, 211, 153, 0.16);
+  --theme-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+[data-theme="light"] {
+  --theme-bg: #f8fafc;
+  --theme-surface: rgba(255, 255, 255, 0.96);
+  --theme-surface-strong: #ffffff;
+  --theme-surface-soft: #f1f5f9;
+  --theme-text: #0f172a;
+  --theme-muted: #64748b;
+  --theme-border: rgba(148, 163, 184, 0.2);
+  --theme-accent: #2563eb;
+  --theme-accent-strong: #1d4ed8;
+  --theme-accent-soft: rgba(37, 99, 235, 0.12);
+  --theme-shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
+}
+
+[data-theme="spring"] {
+  --theme-bg: #f5fbf1;
+  --theme-surface: rgba(255, 255, 255, 0.95);
+  --theme-surface-strong: #ffffff;
+  --theme-surface-soft: #edf9df;
+  --theme-text: #21402d;
+  --theme-muted: #5f7a65;
+  --theme-border: rgba(111, 176, 77, 0.22);
+  --theme-accent: #65a30d;
+  --theme-accent-strong: #4d7c0f;
+  --theme-accent-soft: rgba(132, 204, 22, 0.16);
+  --theme-shadow: 0 20px 60px rgba(80, 120, 44, 0.12);
+}
+
+html,
+body,
+#app {
+  min-height: 100%;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.45), transparent 30%),
+    linear-gradient(180deg, var(--theme-bg) 0%, color-mix(in srgb, var(--theme-bg) 88%, white) 100%);
+  color: var(--theme-text);
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    background 0.25s ease;
+}
+
+a,
+button,
+input,
+textarea,
+select {
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.theme-shell {
+  background: var(--theme-bg);
+  color: var(--theme-text);
+}
+
+.theme-surface {
+  background: var(--theme-surface);
+  color: var(--theme-text);
+  border-color: var(--theme-border);
+  box-shadow: var(--theme-shadow);
+}
+
+.theme-surface-strong {
+  background: var(--theme-surface-strong);
+  color: var(--theme-text);
+}
+
+.theme-surface-soft {
+  background: var(--theme-surface-soft);
+  color: var(--theme-text);
+}
+
+.theme-border {
+  border-color: var(--theme-border);
+}
+
+.theme-text {
+  color: var(--theme-text);
+}
+
+.theme-muted {
+  color: var(--theme-muted);
+}
+
+.theme-accent {
+  color: var(--theme-accent);
+}
+
+.theme-accent-bg {
+  background: var(--theme-accent);
+  color: white;
+}
+
+.theme-accent-bg:hover {
+  background: var(--theme-accent-strong);
+}
+
+.theme-accent-soft {
+  background: var(--theme-accent-soft);
+  color: var(--theme-accent-strong);
+}
+
+.theme-hover:hover {
+  background: var(--theme-accent-soft);
+}

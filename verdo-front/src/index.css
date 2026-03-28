@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* RTL Support */
+[dir="rtl"] {
+  /* Navigation */
+  .nav-link::after {
+    left: auto;
+    right: 0;
+  }
+
+  /* Margins and Paddings */
+  .ml-2 {
+    margin-left: 0;
+    margin-right: 0.5rem;
+  }
+
+  .mr-2 {
+    margin-right: 0;
+    margin-left: 0.5rem;
+  }
+
+  .ml-3 {
+    margin-left: 0;
+    margin-right: 0.75rem;
+  }
+
+  .mr-3 {
+    margin-right: 0;
+    margin-left: 0.75rem;
+  }
+
+  .ml-4 {
+    margin-left: 0;
+    margin-right: 1rem;
+  }
+
+  .mr-4 {
+    margin-right: 0;
+    margin-left: 1rem;
+  }
+
+  /* Flex Direction */
+  .flex-row {
+    flex-direction: row-reverse;
+  }
+
+  /* Text Alignment */
+  .text-left {
+    text-align: right;
+  }
+
+  .text-right {
+    text-align: left;
+  }
+
+  /* Transforms */
+  .translate-x-2 {
+    --tw-translate-x: -0.5rem;
+  }
+
+  .hover\:translate-x-2:hover {
+    --tw-translate-x: -0.5rem;
+  }
+
+  /* Border Radius */
+  .rounded-l-md {
+    border-radius: 0;
+    border-top-right-radius: 0.375rem;
+    border-bottom-right-radius: 0.375rem;
+  }
+
+  .rounded-r-md {
+    border-radius: 0;
+    border-top-left-radius: 0.375rem;
+    border-bottom-left-radius: 0.375rem;
+  }
+}
+
+/* Existing styles */
